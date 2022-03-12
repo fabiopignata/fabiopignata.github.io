@@ -13,4 +13,4 @@ function setGaugeValue(gauge, value) {
   )}%`;
 }
 
-setGaugeValue(gaugeElement, 0.3);
+setGaugeValue(gaugeElement, 0.7);
