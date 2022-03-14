@@ -1,304 +1,176 @@
 
-<!DOCTYPE html>
-<html lang="it-it" dir="ltr">
+<!doctype html>
+<html lang="en">
 <head>
-<link rel="shortcut icon" "favicon.ico" /> <!-- rcostantino -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta charset="utf-8" />
-	<meta name="author" content="Roberto Costantino" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Meteostation</title>
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="https://www.scurbatt.it/index.php?option=com_search&amp;view=article&amp;id=330:meteostation-2&amp;catid=9&amp;lang=it&amp;Itemid=107&amp;format=opensearch" rel="search" title="Vai Scurbatt" type="application/opensearchdescription+xml" />
-	<link href="/media/system/css/modal.css?a22846f382fd7de7fce32c259c5d33dc" rel="stylesheet" />
-	<link href="/media/com_attachments/css/attachments_hide.css" rel="stylesheet" />
-	<link href="/media/com_attachments/css/attachments_list.css" rel="stylesheet" />
-	<link href="/media/com_icagenda/icicons/style.css?a22846f382fd7de7fce32c259c5d33dc" rel="stylesheet" />
-	<link href="/media/com_icagenda/css/icagenda.css?a22846f382fd7de7fce32c259c5d33dc" rel="stylesheet" />
-	<link href="/templates/protostar/css/template.css?a22846f382fd7de7fce32c259c5d33dc" rel="stylesheet" />
-	<link href="/templates/protostar/css/scurbatt.css" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<link href="/plugins/content/sigplus/css/sigplus.min.css" rel="stylesheet" />
-	<link href="/plugins/content/sigplus/engines/boxplus/popup/css/boxplus.min.css" rel="stylesheet" />
-	<link href="/plugins/content/sigplus/engines/boxplus/popup/css/boxplus.lightsquare.css" rel="stylesheet" title="boxplus-lightsquare" />
-	<link href="/components/com_icagenda/themes/packs/ic_rounded/css/ic_rounded_module.css" rel="stylesheet" />
-	<link href="/media/mod_languages/css/template.css?a22846f382fd7de7fce32c259c5d33dc" rel="stylesheet" />
-	<style>
-
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #ff8b29;
-		background-color: #f4f6f7;
-	}
-	/* rcostantino inizio- elimino colore sito (arancio) su link
-	a {
-		color: #ff8b29;
-	}
-	rcostantino fine */
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #ff8b29;
-	}
-#HF ul > li img { border-style:solid !important; }
-@media screen and (min-width:1201px){
-
-
-}
-
-@media screen and (min-width:769px) and (max-width:1200px){
-
-
-}
-
-@media screen and (min-width:481px) and (max-width:768px){
-
-
-.ic_rounded.iccalendar table td .icevent a:hover,
-.ic_rounded.iccalendar table td .icevent a:focus {
-	border-radius:3px;
-	background:#333;
-}
-.ic_rounded.iccalendar table td .icevent a:hover .bright,
-.ic_rounded.iccalendar table td .icevent a:focus .bright {
-	border-radius:3px;
-	color:#fff;
-	background:#333;
-}
-.ic_rounded.iccalendar table td .icmulti a:hover,
-.ic_rounded.iccalendar table td .icevent a:focus {
-	background:#333;
-}
-.ic_rounded.iccalendar table td .icmulti a:hover .bright,
-.ic_rounded.iccalendar table td .icevent a:focus .bright {
-	color:#fff;
-	background:#333;
-}
-
-
-.ic_rounded .icnav .backic:hover,
-.ic_rounded .icnav .nextic:hover,
-.ic_rounded .icnav .backicY:hover,
-.ic_rounded .icnav .nexticY:hover {
-	color:#333333;
-	background:none;
-	cursor:pointer;
-}
-#ictip a.close:hover {
-	color:black;
-	background:none;
-	cursor:pointer;
-}
-#ictip div.linkTo:hover {
-	color:#000;
-	background:#ddd;
-	text-decoration:none;
-	border-radius:3px;
-}
-#ictip a:hover {
-	background:none;
-}
-
-}
-
-@media screen and (max-width:480px){
-
-
-
-	#ictip a.close {
-		padding-right:15px;
-	}
-
-}
-
-div.mod_search104 input[type="search"]{ width:auto; }
-	</style>
-	<script type="application/json" class="joomla-script-options new">{"csrf.token":"1d6efd2c1bb093e96623611d72c3514e","system.paths":{"root":"","base":""}}</script>
-	<script src="/media/com_wrapper/js/iframe-height.min.js?a22846f382fd7de7fce32c259c5d33dc"></script>
-	<script src="/media/system/js/mootools-core.js?a22846f382fd7de7fce32c259c5d33dc"></script>
-	<script src="/media/system/js/core.js?a22846f382fd7de7fce32c259c5d33dc"></script>
-	<script src="/media/system/js/mootools-more.js?a22846f382fd7de7fce32c259c5d33dc"></script>
-	<script src="/media/system/js/modal.js?a22846f382fd7de7fce32c259c5d33dc"></script>
-	<script src="/media/jui/js/jquery.min.js?a22846f382fd7de7fce32c259c5d33dc"></script>
-	<script src="/media/jui/js/jquery-noconflict.js?a22846f382fd7de7fce32c259c5d33dc"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js?a22846f382fd7de7fce32c259c5d33dc"></script>
-	<script src="/media/com_attachments/js/attachments_refresh.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js?a22846f382fd7de7fce32c259c5d33dc"></script>
-	<script src="/media/system/js/caption.js?a22846f382fd7de7fce32c259c5d33dc"></script>
-	<script src="/templates/protostar/js/template.js?a22846f382fd7de7fce32c259c5d33dc"></script>
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js?a22846f382fd7de7fce32c259c5d33dc"></script><![endif]-->
-	<script src="/templates/protostar/js/jquery.backstretch.js"></script>
-	<script src="/plugins/content/sigplus/engines/boxplus/popup/js/boxplus.min.js"></script>
-	<script src="/plugins/content/sigplus/engines/boxplus/lang/boxplus.lang.min.js"></script>
-	<script src="/modules/mod_iccalendar/js/jQuery.highlightToday.min.js"></script>
-	<!--[if lt IE 9]><script src="/media/system/js/html5fallback.js?a22846f382fd7de7fce32c259c5d33dc"></script><![endif]-->
-	<script>
-
-		jQuery(function($) {
-			SqueezeBox.initialize({});
-			initSqueezeBox();
-			$(document).on('subform-row-add', initSqueezeBox);
-
-			function initSqueezeBox(event, container)
-			{
-				SqueezeBox.assign($(container || document).find('a.modal').get(), {
-					parse: 'rel'
-				});
-			}
-		});
-
-		window.jModalClose = function () {
-			SqueezeBox.close();
-		};
-
-		// Add extra modal close functionality for tinyMCE-based editors
-		document.onreadystatechange = function () {
-			if (document.readyState == 'interactive' && typeof tinyMCE != 'undefined' && tinyMCE)
-			{
-				if (typeof window.jModalClose_no_tinyMCE === 'undefined')
-				{
-					window.jModalClose_no_tinyMCE = typeof(jModalClose) == 'function'  ?  jModalClose  :  false;
-
-					jModalClose = function () {
-						if (window.jModalClose_no_tinyMCE) window.jModalClose_no_tinyMCE.apply(this, arguments);
-						tinyMCE.activeEditor.windowManager.close();
-					};
-				}
-
-				if (typeof window.SqueezeBoxClose_no_tinyMCE === 'undefined')
-				{
-					if (typeof(SqueezeBox) == 'undefined')  SqueezeBox = {};
-					window.SqueezeBoxClose_no_tinyMCE = typeof(SqueezeBox.close) == 'function'  ?  SqueezeBox.close  :  false;
-
-					SqueezeBox.close = function () {
-						if (window.SqueezeBoxClose_no_tinyMCE)  window.SqueezeBoxClose_no_tinyMCE.apply(this, arguments);
-						tinyMCE.activeEditor.windowManager.close();
-					};
-				}
-			}
-		};
-		
-jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-    (function($) {
-    $(document).ready(function() {
-        $.backstretch(["templates/protostar/images/ambiente.jpg"]);
-    });
-})(jQuery);
-
-if (typeof(__jQuery__) == "undefined") { var __jQuery__ = jQuery; }
-__jQuery__(document).ready(function() {
-__jQuery__("#HF").boxplusGallery(__jQuery__.extend({}, { rtl:false, theme: "lightsquare", title: function (anchor) { var t = __jQuery__("#" + __jQuery__("img", anchor).attr("id") + "_caption"); return t.size() ? t.html() : __jQuery__("img", anchor).attr("alt"); }, description: function (anchor) { var s = __jQuery__("#" + __jQuery__("img", anchor).attr("id") + "_summary"); return s.size() ? s.html() : anchor.attr("title"); }, slideshow: 0, download: function (anchor) { var d = __jQuery__("#" + __jQuery__("img", anchor).attr("id") + "_metadata a[rel=download]"); return d.size() ? d.attr("href") : ""; }, metadata: function (anchor) { var m = __jQuery__("#" + __jQuery__("img", anchor).attr("id") + "_iptc"); return m.size() ? m : ""; }  })); __jQuery__.boxplusLanguage("it", "IT");
-});
-
-		jQuery(document).ready(function(){
-			jQuery("#mod_iccalendar_99").highlightToday("show_today");
-		});
-	
-	</script>
-	<meta http-equiv="Content-Style-Type" content="text/css" />
-	<!--[if lt IE 8]><link rel="stylesheet" href="/plugins/content/sigplus/css/sigplus.ie7.css" type="text/css" /><![endif]-->
-	<!--[if lt IE 9]><link rel="stylesheet" href="/plugins/content/sigplus/engines/boxplus/popup/css/boxplus.ie8.css" type="text/css" /><![endif]-->
-	<!--[if lt IE 8]><link rel="stylesheet" href="/plugins/content/sigplus/engines/boxplus/popup/css/boxplus.ie7.css" type="text/css" /><![endif]-->
-	<!--[if lt IE 9]><link rel="stylesheet" href="/plugins/content/sigplus/engines/boxplus/popup/css/boxplus.lightsquare.ie8.css" type="text/css" title="boxplus-lightsquare" /><![endif]-->
-
-	<!-- rcostantino - inizio stile-->
-	<style type="text/css">
-            .feedfivlnews ul{
-                list-style:none;
-            }
-            .newsfeedfivlnews ul{
-                margin-left:-25px;
-            }
-            .newsfeedfivlnews li a{
-                font-size:12px;
-            }
-            .navbar-inner{
-                -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-                -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-                box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-            }
-           
-            .body .container{
-                background-color: rgba(255, 255, 255, 0.6);
-		//background-color: #edf3f7;
-            }
-            .header-search{
-                margin-top:18px;
-                margin-right:20px;
-            }
-            .item-title a:hover, .page-header a:hover, .feed a:hover{
-                color:#FF8B29;
-            }
-            .item-title a, .page-header a, .feed a{
-                color:#005580;
-            }
-            .page-header h1{
-                font-size:36px;
-                color: rgba(101, 103, 102, 0.2);
-                margin-top:0px;
-            }
-            .page-header{
-                color: rgba(101, 103, 102, 0.7);
-            }
-            .feed h2 a, .feed h2 a:hover{
-                color: rgba(101, 103, 102, 0.9);
-                text-decoration: none;
-            }
-            .sponsors{
-                margin-top:2px;
-                margin-bottom:2px;
-            }
-            #sponsors{
-                margin-top:1px;
-                margin-bottom:6px;
-            }
-            #sicurezza{
-                margin-top:2px;
-                margin-bottom:1px;
-            }
-            .carousel{
-                margin-top:auto;
-                margin-bottom:auto;
-            }
-            .item-image img{
-                border: 1px solid #ff8b29;
-            }
-        </style>
-		<!-- rcostantino - fine stile-->
+  <title>MeteoStation</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/meteostation.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+  	<script src="./js/bootstrap.min.js"></script>
+  	<script src="./js/highcharts.js"></script>
+	  <script src="./js/highcharts-more.js"></script>
+    <script src="./js/solid-gauge.js"></script>
+    <script src="./js/meteostation.js?version=1"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.miubyte.com"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//piwik.miubyte.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
 </head>
+<body>
 
-<body class="site com_content view-article no-layout no-task itemid-107">
-	<!-- Body -->
-	<div class="body" id="top">
-	<div class="container">
-			
-	<div itemprop="articleBody">
-	<p><iframe onload="iFrameHeight(this)"	id="blockrandom-123"
-	name=""
-	src="https://meteostation.miubyte.com/"
-	width="100%"
-	height="3500"
-	scrolling="no"
-	frameborder="0"
-	title="miubyte_meteostation"
-	class="wrapper" >
-	Nessun Iframes</iframe>
-</p> <div class="attachmentsContainer">
-
-<div class="attachmentsList" id="attachmentsList_com_content_default_330"></div>
-							
-</div>	
+<div class="container">
+  <div class="jumbotron">
+    <h1>MeteoStation</h1>
+    <p>Mt. Rai 1261 m. <br> @ <span id="collection_DateTime"></span></p>
+    </div>
 </div>
-	
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header">Wind speed</div>
+        <div class="card-body">
+          <div id="new_wind_container" style="height: 175px; margin: 0 auto"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header">Temperature &deg;C</div>
+        <div class="card-body">
+          <div id="temp_container" style="height: 175px; margin: 0 auto"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header">Humidity %</div>
+        <div class="card-body">
+          <div id="hum_container" style="height: 175px; margin: 0 auto"></div>
+        </div>
+      </div>
+      <br>
+		 </div>
+   </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">Last 1h wind</div>
+        <div class="card-body">
+          <div id="rose1h_container" style="height: 265px; margin: 0 auto"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">Last 3h wind</div>
+        <div class="card-body">
+          <div id="rose3h_container" style="height: 265px; margin: 0 auto"></div>
+        </div>
+      </div>
+    <br>
+    </div>
+  </div>
+
+	<div class="row">
+    <div class="col-md-12 jobs_index_middle_panels">
+      <div class="card">
+        <div class="card-header">20 min avg wind speed last 3h</div>
+        <div class="card-body">
+          <div id="wind3h_container" style="height: 265px; margin: 0 auto"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 jobs_index_middle_panels">
+      <div class="card">
+        <div class="card-header">1h avg wind speed last 24h</div>
+        <div class="card-body">
+          <div id="wind24h_container" style="height: 265px; margin: 0 auto"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 jobs_index_middle_panels">
+      <div class="card">
+        <div class="card-header">Temperature last 24h</div>
+        <div class="card-body">
+          <div id="temp24h_container" style="height: 265px; margin: 0 auto"></div>
+        </div>
+      </div>
+      <br>
+	  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 jobs_index_middle_panels">
+      <div class="card">
+        <div class="card-header">Humidity last 24h</div>
+        <div class="card-body">
+          <div id="hum24h_container" style="height: 265px; margin: 0 auto"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+</div>
+
+<div class="container-fluid bg-4 text-center" style="margin-bottom:0">
+  <p><small>Meteostation 3.1.0 © 2013-2021 miubyte Developed by Fabrizio Cavadini with highcharts components.</small></p>
+</div>
+
+<script>
+        window.onload = function ()
+        	{
+        	run();
+			}
+    </script>
 </body>
 </html>
