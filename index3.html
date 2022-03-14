@@ -1,0 +1,885 @@
+
+<!DOCTYPE html>
+<html lang="it-it" dir="ltr">
+<head>
+<link rel="shortcut icon" "favicon.ico" /> <!-- rcostantino -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8" />
+	<meta name="author" content="Roberto Costantino" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Meteostation</title>
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="https://www.scurbatt.it/index.php?option=com_search&amp;view=article&amp;id=330:meteostation-2&amp;catid=9&amp;lang=it&amp;Itemid=107&amp;format=opensearch" rel="search" title="Vai Scurbatt" type="application/opensearchdescription+xml" />
+	<link href="/media/system/css/modal.css?a22846f382fd7de7fce32c259c5d33dc" rel="stylesheet" />
+	<link href="/media/com_attachments/css/attachments_hide.css" rel="stylesheet" />
+	<link href="/media/com_attachments/css/attachments_list.css" rel="stylesheet" />
+	<link href="/media/com_icagenda/icicons/style.css?a22846f382fd7de7fce32c259c5d33dc" rel="stylesheet" />
+	<link href="/media/com_icagenda/css/icagenda.css?a22846f382fd7de7fce32c259c5d33dc" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css?a22846f382fd7de7fce32c259c5d33dc" rel="stylesheet" />
+	<link href="/templates/protostar/css/scurbatt.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<link href="/plugins/content/sigplus/css/sigplus.min.css" rel="stylesheet" />
+	<link href="/plugins/content/sigplus/engines/boxplus/popup/css/boxplus.min.css" rel="stylesheet" />
+	<link href="/plugins/content/sigplus/engines/boxplus/popup/css/boxplus.lightsquare.css" rel="stylesheet" title="boxplus-lightsquare" />
+	<link href="/components/com_icagenda/themes/packs/ic_rounded/css/ic_rounded_module.css" rel="stylesheet" />
+	<link href="/media/mod_languages/css/template.css?a22846f382fd7de7fce32c259c5d33dc" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #ff8b29;
+		background-color: #f4f6f7;
+	}
+	/* rcostantino inizio- elimino colore sito (arancio) su link
+	a {
+		color: #ff8b29;
+	}
+	rcostantino fine */
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #ff8b29;
+	}
+#HF ul > li img { border-style:solid !important; }
+@media screen and (min-width:1201px){
+
+
+}
+
+@media screen and (min-width:769px) and (max-width:1200px){
+
+
+}
+
+@media screen and (min-width:481px) and (max-width:768px){
+
+
+.ic_rounded.iccalendar table td .icevent a:hover,
+.ic_rounded.iccalendar table td .icevent a:focus {
+	border-radius:3px;
+	background:#333;
+}
+.ic_rounded.iccalendar table td .icevent a:hover .bright,
+.ic_rounded.iccalendar table td .icevent a:focus .bright {
+	border-radius:3px;
+	color:#fff;
+	background:#333;
+}
+.ic_rounded.iccalendar table td .icmulti a:hover,
+.ic_rounded.iccalendar table td .icevent a:focus {
+	background:#333;
+}
+.ic_rounded.iccalendar table td .icmulti a:hover .bright,
+.ic_rounded.iccalendar table td .icevent a:focus .bright {
+	color:#fff;
+	background:#333;
+}
+
+
+.ic_rounded .icnav .backic:hover,
+.ic_rounded .icnav .nextic:hover,
+.ic_rounded .icnav .backicY:hover,
+.ic_rounded .icnav .nexticY:hover {
+	color:#333333;
+	background:none;
+	cursor:pointer;
+}
+#ictip a.close:hover {
+	color:black;
+	background:none;
+	cursor:pointer;
+}
+#ictip div.linkTo:hover {
+	color:#000;
+	background:#ddd;
+	text-decoration:none;
+	border-radius:3px;
+}
+#ictip a:hover {
+	background:none;
+}
+
+}
+
+@media screen and (max-width:480px){
+
+
+
+	#ictip a.close {
+		padding-right:15px;
+	}
+
+}
+
+div.mod_search104 input[type="search"]{ width:auto; }
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"1d6efd2c1bb093e96623611d72c3514e","system.paths":{"root":"","base":""}}</script>
+	<script src="/media/com_wrapper/js/iframe-height.min.js?a22846f382fd7de7fce32c259c5d33dc"></script>
+	<script src="/media/system/js/mootools-core.js?a22846f382fd7de7fce32c259c5d33dc"></script>
+	<script src="/media/system/js/core.js?a22846f382fd7de7fce32c259c5d33dc"></script>
+	<script src="/media/system/js/mootools-more.js?a22846f382fd7de7fce32c259c5d33dc"></script>
+	<script src="/media/system/js/modal.js?a22846f382fd7de7fce32c259c5d33dc"></script>
+	<script src="/media/jui/js/jquery.min.js?a22846f382fd7de7fce32c259c5d33dc"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?a22846f382fd7de7fce32c259c5d33dc"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?a22846f382fd7de7fce32c259c5d33dc"></script>
+	<script src="/media/com_attachments/js/attachments_refresh.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js?a22846f382fd7de7fce32c259c5d33dc"></script>
+	<script src="/media/system/js/caption.js?a22846f382fd7de7fce32c259c5d33dc"></script>
+	<script src="/templates/protostar/js/template.js?a22846f382fd7de7fce32c259c5d33dc"></script>
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js?a22846f382fd7de7fce32c259c5d33dc"></script><![endif]-->
+	<script src="/templates/protostar/js/jquery.backstretch.js"></script>
+	<script src="/plugins/content/sigplus/engines/boxplus/popup/js/boxplus.min.js"></script>
+	<script src="/plugins/content/sigplus/engines/boxplus/lang/boxplus.lang.min.js"></script>
+	<script src="/modules/mod_iccalendar/js/jQuery.highlightToday.min.js"></script>
+	<!--[if lt IE 9]><script src="/media/system/js/html5fallback.js?a22846f382fd7de7fce32c259c5d33dc"></script><![endif]-->
+	<script>
+
+		jQuery(function($) {
+			SqueezeBox.initialize({});
+			initSqueezeBox();
+			$(document).on('subform-row-add', initSqueezeBox);
+
+			function initSqueezeBox(event, container)
+			{
+				SqueezeBox.assign($(container || document).find('a.modal').get(), {
+					parse: 'rel'
+				});
+			}
+		});
+
+		window.jModalClose = function () {
+			SqueezeBox.close();
+		};
+
+		// Add extra modal close functionality for tinyMCE-based editors
+		document.onreadystatechange = function () {
+			if (document.readyState == 'interactive' && typeof tinyMCE != 'undefined' && tinyMCE)
+			{
+				if (typeof window.jModalClose_no_tinyMCE === 'undefined')
+				{
+					window.jModalClose_no_tinyMCE = typeof(jModalClose) == 'function'  ?  jModalClose  :  false;
+
+					jModalClose = function () {
+						if (window.jModalClose_no_tinyMCE) window.jModalClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+
+				if (typeof window.SqueezeBoxClose_no_tinyMCE === 'undefined')
+				{
+					if (typeof(SqueezeBox) == 'undefined')  SqueezeBox = {};
+					window.SqueezeBoxClose_no_tinyMCE = typeof(SqueezeBox.close) == 'function'  ?  SqueezeBox.close  :  false;
+
+					SqueezeBox.close = function () {
+						if (window.SqueezeBoxClose_no_tinyMCE)  window.SqueezeBoxClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+			}
+		};
+		
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+    (function($) {
+    $(document).ready(function() {
+        $.backstretch(["templates/protostar/images/ambiente.jpg"]);
+    });
+})(jQuery);
+
+if (typeof(__jQuery__) == "undefined") { var __jQuery__ = jQuery; }
+__jQuery__(document).ready(function() {
+__jQuery__("#HF").boxplusGallery(__jQuery__.extend({}, { rtl:false, theme: "lightsquare", title: function (anchor) { var t = __jQuery__("#" + __jQuery__("img", anchor).attr("id") + "_caption"); return t.size() ? t.html() : __jQuery__("img", anchor).attr("alt"); }, description: function (anchor) { var s = __jQuery__("#" + __jQuery__("img", anchor).attr("id") + "_summary"); return s.size() ? s.html() : anchor.attr("title"); }, slideshow: 0, download: function (anchor) { var d = __jQuery__("#" + __jQuery__("img", anchor).attr("id") + "_metadata a[rel=download]"); return d.size() ? d.attr("href") : ""; }, metadata: function (anchor) { var m = __jQuery__("#" + __jQuery__("img", anchor).attr("id") + "_iptc"); return m.size() ? m : ""; }  })); __jQuery__.boxplusLanguage("it", "IT");
+});
+
+		jQuery(document).ready(function(){
+			jQuery("#mod_iccalendar_99").highlightToday("show_today");
+		});
+	
+	</script>
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<!--[if lt IE 8]><link rel="stylesheet" href="/plugins/content/sigplus/css/sigplus.ie7.css" type="text/css" /><![endif]-->
+	<!--[if lt IE 9]><link rel="stylesheet" href="/plugins/content/sigplus/engines/boxplus/popup/css/boxplus.ie8.css" type="text/css" /><![endif]-->
+	<!--[if lt IE 8]><link rel="stylesheet" href="/plugins/content/sigplus/engines/boxplus/popup/css/boxplus.ie7.css" type="text/css" /><![endif]-->
+	<!--[if lt IE 9]><link rel="stylesheet" href="/plugins/content/sigplus/engines/boxplus/popup/css/boxplus.lightsquare.ie8.css" type="text/css" title="boxplus-lightsquare" /><![endif]-->
+
+	<!-- rcostantino - inizio stile-->
+	<style type="text/css">
+            .feedfivlnews ul{
+                list-style:none;
+            }
+            .newsfeedfivlnews ul{
+                margin-left:-25px;
+            }
+            .newsfeedfivlnews li a{
+                font-size:12px;
+            }
+            .navbar-inner{
+                -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
+                -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
+            }
+           
+            .body .container{
+                background-color: rgba(255, 255, 255, 0.6);
+		//background-color: #edf3f7;
+            }
+            .header-search{
+                margin-top:18px;
+                margin-right:20px;
+            }
+            .item-title a:hover, .page-header a:hover, .feed a:hover{
+                color:#FF8B29;
+            }
+            .item-title a, .page-header a, .feed a{
+                color:#005580;
+            }
+            .page-header h1{
+                font-size:36px;
+                color: rgba(101, 103, 102, 0.2);
+                margin-top:0px;
+            }
+            .page-header{
+                color: rgba(101, 103, 102, 0.7);
+            }
+            .feed h2 a, .feed h2 a:hover{
+                color: rgba(101, 103, 102, 0.9);
+                text-decoration: none;
+            }
+            .sponsors{
+                margin-top:2px;
+                margin-bottom:2px;
+            }
+            #sponsors{
+                margin-top:1px;
+                margin-bottom:6px;
+            }
+            #sicurezza{
+                margin-top:2px;
+                margin-bottom:1px;
+            }
+            .carousel{
+                margin-top:auto;
+                margin-bottom:auto;
+            }
+            .item-image img{
+                border: 1px solid #ff8b29;
+            }
+        </style>
+		<!-- rcostantino - fine stile-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-107">
+<!-- rcostantino - inizio sfondo-->
+<!-- rcostantino - fine sfondo-->
+	<!-- Body -->
+	<div class="body" id="top">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<!-- rcostantino - inizio logo aeroclub monte cornizzolo -->
+				<div align="right">
+				<a href="http://www.cornizzolo.com" class="brand" target="_blank">Aero Club Monte Cornizzolo
+				<img src="/images/template/aeroclubmontecornizzolo.png" width="100" alt="Aero Club Monte Cornizzolo">
+				</a>
+				</div>
+				<!-- rcostantino - fine logo aeroclub monte cornizzolo -->
+				<div class="header-inner clearfix">
+				<!-- rcostantino - inizio link a e-mail sul logo
+					<!--a class="brand pull-left" href="/"-->
+					<a class="brand pull-left" href="mailto:info.scurbatt@gmail.com">
+					<!-- rcostantino - fine link a e-mail sul logo -->
+					<a class="brand pull-left" href="/">
+						<img src="https://www.scurbatt.it/images/template/logo_web.png" alt="Scurbatt" />											</a>
+					<div class="header-search pull-right">
+						
+				<!-- rcostantino 10.12.2013 - inizio titolo -->
+				                     <a class="brand site-title" href="/">
+                       Parapendio Club Scurbatt                    </a>	
+                				<!-- rcostantino 10.12.2013 - fine titolo -->
+<!-- rcostantino 10.12.2013 - immagine email -->
+</br><table witdh="100%" valign="top" align="left"><tr><td><a href="mailto:info.scurbatt@gmail.com"><IMG src="/./images/template/email.png" ALIGN=RIGTH WIDTH="170"></a></td></tr></table>
+<!-- rcostantino 10.12.2013 - immagine email -->
+<!-- rcostantino 20.02.2014 modulo "cerca" -->
+		<div align="right">
+            <div class="search mod_search104">
+	<form action="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=9&amp;Itemid=107&amp;lang=it" method="post" class="form-inline" role="search">
+		<label for="mod-search-searchword104" class="element-invisible">Cerca...</label> <input name="searchword" id="mod-search-searchword104" maxlength="200"  class="inputbox search-query input-medium" type="search" size="20" placeholder="Cerca..." />		<input type="hidden" name="task" value="search" />
+		<input type="hidden" name="option" value="com_search" />
+		<input type="hidden" name="Itemid" value="107" />
+	</form>
+</div>
+    
+	</div>
+	<!-- rcostantino 20.02.2014 modulo "cerca" -->
+					</div>
+				</div>
+			</header>
+<!-- rcostantino 06.08.2013 modulo "langu" per gestione lingua -->
+	        <div class="header-search pull-right">
+            <div class="mod-languages">
+
+	<ul class="lang-inline" dir="ltr">
+									<li class="lang-active">
+			<a href="https://www.scurbatt.it/index.php?option=com_content&view=article&id=330:meteostation-2&catid=9&lang=it&Itemid=107">
+												<img src="/media/mod_languages/images/it.gif" alt="Italian (IT)" title="Italian (IT)" />										</a>
+			</li>
+								<li>
+			<a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=9&amp;Itemid=107&amp;lang=en">
+												<img src="/media/mod_languages/images/en.gif" alt="English (UK)" title="English (UK)" />										</a>
+			</li>
+				</ul>
+
+</div>
+
+        </div>
+        <!-- rcostantino 06.08.2013 modulo "langu" per gestione lingua -->
+							<nav class="navigation" role="navigation">
+					<div class="navbar pull-left">
+						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="element-invisible">Cambia navigazione</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+					</div>
+					<div class="nav-collapse">
+						<ul class="nav menu nav-pills mod-list">
+<li class="item-121 default"><a href="/index.php?option=com_content&amp;view=featured&amp;Itemid=121&amp;lang=it" >Home</a></li><li class="item-131 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=25&amp;Itemid=131&amp;lang=it" >Il club</a><ul class="nav-child unstyled small"><li class="item-133"><a href="/index.php?option=com_content&amp;view=article&amp;id=25&amp;Itemid=133&amp;lang=it" >Consiglio e statuto</a></li><li class="item-134"><a href="/index.php?option=com_content&amp;view=article&amp;id=26&amp;Itemid=134&amp;lang=it" >Dove siamo - Come raggiungerci</a></li><li class="item-200"><a href="/index.php?option=com_content&amp;view=article&amp;id=118&amp;Itemid=200&amp;lang=it" >Norme operative per i piloti</a></li><li class="item-647"><a href="/index.php?option=com_plotalot&amp;view=simple&amp;Itemid=647&amp;lang=it" >Andamento iscrizioni</a></li></ul></li><li class="item-700"><a href="/index.php?option=com_content&amp;view=article&amp;id=34&amp;Itemid=700&amp;lang=it" >Iscrizioni</a></li><li class="item-123 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=26&amp;Itemid=123&amp;lang=it" >Al Cornizzolo</a><ul class="nav-child unstyled small"><li class="item-127"><a href="/index.php?option=com_content&amp;view=article&amp;id=18&amp;Itemid=127&amp;lang=it" >La zona di volo</a></li><li class="item-186"><a href="/index.php?option=com_content&amp;view=article&amp;id=79&amp;Itemid=186&amp;lang=it" >TMA Locarno</a></li><li class="item-151"><a href="/index.php?option=com_content&amp;view=article&amp;id=30&amp;Itemid=151&amp;lang=it" >Dove soggiornare</a></li><li class="item-118"><a href="/index.php?option=com_content&amp;view=article&amp;id=16&amp;Itemid=118&amp;lang=it" >Servizio Navetta</a></li><li class="item-182"><a href="/index.php?option=com_content&amp;view=article&amp;id=66&amp;Itemid=182&amp;lang=it" >Frequenza di sicurezza</a></li><li class="item-129"><a href="/index.php?option=com_content&amp;view=article&amp;id=21&amp;Itemid=129&amp;lang=it" >I voli</a></li><li class="item-184"><a href="/index.php?option=com_content&amp;view=article&amp;id=76&amp;Itemid=184&amp;lang=it" >Atterraggi fuori campo</a></li><li class="item-201"><a href="/index.php?option=com_content&amp;view=article&amp;id=118&amp;Itemid=201&amp;lang=it" >Norme operative per i piloti</a></li></ul></li><li class="item-141 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=27&amp;Itemid=141&amp;lang=it" >Servizi</a><ul class="nav-child unstyled small"><li class="item-181"><a href="/index.php?option=com_content&amp;view=category&amp;id=34&amp;Itemid=181&amp;lang=it" >Comunicati di sicurezza</a></li><li class="item-179"><a href="/index.php?option=com_weblinks&amp;view=category&amp;id=33&amp;Itemid=179&amp;lang=it" >Download</a></li><li class="item-143"><a href="/index.php?option=com_content&amp;view=article&amp;id=16&amp;Itemid=143&amp;lang=it" >Navetta</a></li><li class="item-155"><a href="/index.php?option=com_content&amp;view=article&amp;id=34&amp;Itemid=155&amp;lang=it" >Rinnovi - Iscrizione</a></li><li class="item-156"><a href="/index.php?option=com_content&amp;view=article&amp;id=36&amp;Itemid=156&amp;lang=it" >Visite mediche</a></li><li class="item-190"><a href="/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=190&amp;lang=it" >Calendario Scurbatt</a></li><li class="item-594"><a href="/index.php?option=com_content&amp;view=article&amp;id=371&amp;Itemid=594&amp;lang=it" >Scurbatt news con WhatsApp</a></li></ul></li><li class="item-160 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=28&amp;Itemid=160&amp;lang=it" >Gare</a><ul class="nav-child unstyled small"><li class="item-206"><a href="/index.php?option=com_content&amp;view=category&amp;id=17&amp;Itemid=206&amp;lang=it" >News gare</a></li><li class="item-161"><a href="/index.php?option=com_content&amp;view=article&amp;id=41&amp;Itemid=161&amp;lang=it" >Scurbatt d'Oro</a></li><li class="item-204"><a href="/index.php?option=com_wrapper&amp;view=wrapper&amp;Itemid=204&amp;lang=it" >XC Scurbatt 2019</a></li><li class="item-261"><a href="/index.php?option=com_content&amp;view=category&amp;id=36&amp;Itemid=261&amp;lang=it" >XC Storia</a></li><li class="item-230"><a href="/index.php?option=com_wrapper&amp;view=wrapper&amp;Itemid=230&amp;lang=it" >Calendario 2017</a></li><li class="item-356"><a href="/index.php?option=com_content&amp;view=article&amp;id=336&amp;Itemid=356&amp;lang=it" >Regolamento Scurbatt Contest 2020</a></li></ul></li><li class="item-145 deeper parent"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=29&amp;Itemid=145&amp;lang=it" >Meteo</a><ul class="nav-child unstyled small"><li class="item-193"><span class="nav-header ">Stazioni meteo</span>
+</li><li class="item-231"><a href="/index.php?option=com_content&amp;view=article&amp;id=330&amp;Itemid=231&amp;lang=it" >Stazione meteo M.te Rai **</a></li><li class="item-188"><a href="http://www.centrometeolombardo.com/content.asp?contentid=2274&amp;ContentType=Stazioni" target="_blank" rel="noopener noreferrer">Monte Cornizzolo - Rifugio SEC</a></li><li class="item-192"><span class="nav-header ">Webcam</span>
+</li><li class="item-150"><a href="/index.php?option=com_content&amp;view=article&amp;id=161&amp;Itemid=150&amp;lang=it" >Webcam Scurbatt **</a></li><li class="item-198"><a href="https://grignone.panomax.com/rifugiobrioschi" target="_blank" rel="noopener noreferrer">Grigna - rif. Brioschi</a></li><li class="item-507"><a href="https://pianidibobbio.panomax.com/" target="_blank" rel="noopener noreferrer">Piani di Bobbio</a></li></ul></li><li class="item-106"><a href="/index.php?option=com_content&amp;view=category&amp;id=22&amp;Itemid=106&amp;lang=it" >Attimi Digitali</a></li><li class="item-177"><a href="/index.php?option=com_icagenda&amp;view=list&amp;Itemid=177&amp;lang=it" >Eventi</a></li></ul>
+
+					</div>
+				</nav>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="it-IT" />
+	
+		
+						
+		
+	
+	
+		
+						<div itemprop="articleBody">
+		<p><iframe onload="iFrameHeight(this)"	id="blockrandom-123"
+	name=""
+	src="https://meteostation.miubyte.com/"
+	width="100%"
+	height="3500"
+	scrolling="no"
+	frameborder="0"
+	title="miubyte_meteostation"
+	class="wrapper" >
+	Nessun Iframes</iframe>
+</p> <div class="attachmentsContainer">
+
+<div class="attachmentsList" id="attachmentsList_com_content_default_330"></div>
+
+</div>	</div>
+
+	
+	<ul class="pager pagenav">
+	<li class="next">
+		<a class="hasTooltip" title="Scurbatt Cam" aria-label="Articolo successivo: Scurbatt Cam" href="/index.php?option=com_content&amp;view=article&amp;id=161:scurbatt-cam&amp;catid=29&amp;Itemid=150&amp;lang=it" rel="next">
+			<span aria-hidden="true">Avanti</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+									</div>
+
+					<div class="clearfix"></div>
+					<div aria-label="Percorso" role="navigation">
+	<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+					<li>
+				Sei qui: &#160;
+			</li>
+		
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/index.php?option=com_content&amp;view=featured&amp;Itemid=121&amp;lang=it" class="pathway"><span itemprop="name">Home</span></a>
+					
+											<span class="divider">
+							<img src="/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="1">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=9&amp;Itemid=107&amp;lang=it" class="pathway"><span itemprop="name">Scurbatt News</span></a>
+					
+											<span class="divider">
+							<img src="/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="2">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/index.php?option=com_content&amp;view=category&amp;id=29&amp;Itemid=145&amp;lang=it" class="pathway"><span itemprop="name">meteo-menu</span></a>
+					
+											<span class="divider">
+							<img src="/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="3">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+					<span itemprop="name">
+						Meteostation					</span>
+					<meta itemprop="position" content="4">
+				</li>
+				</ul>
+</div>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well "><h3 class="page-header">Scurbatt Cam</h3>
+
+<div class="custom"  >
+	<p><a href="/index.php?option=com_content&amp;view=article&amp;id=161&amp;Itemid=150&amp;lang=it"><img id="g_cam_small" src="/images/webcam/CamImg.jpg?nocache=&lt;?php echo time(); ?&gt;" width="177" height="99" /></a></p>
+<p><a href="/index.php?option=com_content&amp;view=article&amp;id=330:meteostation-2&amp;catid=9&amp;lang=it&amp;Itemid=231" rel="alternate">MeteoStation</a><a href="/index.php?option=com_content&amp;view=article&amp;id=330:meteostation-2&amp;catid=9&amp;lang=it&amp;Itemid=231" rel="alternate"><br /></a></p></div>
+</div><div class="well "><h3 class="page-header">Notizie lampo</h3>
+
+<div class="custom"  >
+	<p><a href="/index.php?option=com_content&amp;view=article&amp;id=464:calendario-hike-and-fly-2021-2022&amp;catid=9&amp;lang=it&amp;Itemid=107">Calendario H&amp;F</a></p>
+<p><div id="HF" class="sigplus-gallery sigplus-left sigplus-clear" style="display:none !important;"><ul><li><a href="/images/scurbatt_gallery/2021/HF/HikeFly2022.jpg" rel="boxplus-HF"><img id="HF_img0000" width="150" height="83" src="/cache/preview/a3be74b29ad77ef24a80e114a8dccbed.jpg" alt=""/></a></li></ul></div> <a href="javascript:void(__jQuery__(&quot;#HF a[rel^=boxplus]:eq(0)&quot;).click())"><img src="/images/HikeFly2022.jpg" alt="" width="631" height="351" /> </a></p>
+<hr />
+<p>Clicca <a href="https://t.me/+1oHJQ73LsRA3Nzdk" target="_blank" rel="noopener noreferrer">QUI</a> e unisciti al canale telegram</p>
+<p><a href="https://t.me/+1oHJQ73LsRA3Nzdk" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" width="92" height="92" /></a></p></div>
+</div><div class="well "><h3 class="page-header">Convenzione Montura</h3>
+
+<div class="custom"  >
+	<p><a href="https://www.montura.it/it/our-stores/alpstation_brianza_dolzago_italia_via_23843/" target="_blank" rel="alternate noopener noreferrer">Alpstation Brianza</a>.<br />Anche per il 2021 sconto del 20% per i soci Scurbatt<br /><a href="http://www.montura.it/it/alpstation_store/alpstation/alpstation-brianza.php" target="_blank" rel="alternate noopener noreferrer"><img src="/images/montura/montura.jpg" alt="" width="150" height="101" /></a></p></div>
+</div><div class="well "><h3 class="page-header">Agenda Scurbatt</h3><!-- iCagenda - Calendar --><div tabindex="0" id="ic-calendar-99" class="">
+<!-- Calendar -->
+
+
+<div class="ic_rounded iccalendar " style=" background-color: transparent; background-image: none;" id="99"><div id="mod_iccalendar_99">
+			<div class="icagenda_header">
+			</div><div class="icnav"><a id="ic-prev-year" class="backicY icagendabtn_99" href="https://www.scurbatt.it/index.php?option=com_content&amp;view=article&amp;id=330:meteostation-2&amp;catid=9&amp;lang=it&amp;Itemid=107&amp;iccaldate=2021-03-1" rel="nofollow"><span style="height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px;" title="">Anno Precedente</span><span class="iCicon iCicon-backicY"></span></a><a id="ic-prev-month" class="backic icagendabtn_99" href="https://www.scurbatt.it/index.php?option=com_content&amp;view=article&amp;id=330:meteostation-2&amp;catid=9&amp;lang=it&amp;Itemid=107&amp;iccaldate=2022-2-1" rel="nofollow"><span style="height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px;" title="">Mese Precedente</span><span class="iCicon iCicon-backic"></span></a><a id="ic-next-year" class="nexticY icagendabtn_99" href="https://www.scurbatt.it/index.php?option=com_content&amp;view=article&amp;id=330:meteostation-2&amp;catid=9&amp;lang=it&amp;Itemid=107&amp;iccaldate=2023-03-1" rel="nofollow"><span style="height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px;" title="">Anno successivo</span><span class="iCicon iCicon-nexticY"></span></a><a id="ic-next-month" class="nextic icagendabtn_99" href="https://www.scurbatt.it/index.php?option=com_content&amp;view=article&amp;id=330:meteostation-2&amp;catid=9&amp;lang=it&amp;Itemid=107&amp;iccaldate=2022-4-1" rel="nofollow"><span style="height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px;" title="">Mese successivo</span><span class="iCicon iCicon-nextic"></span></a><div class="titleic">Marzo 2022</div></div><div style="clear:both"></div>
+			<table id="icagenda_calendar" class="ic-table" style="width:100%;">
+				<thead>
+					<tr>
+						<th style="width:14.2857143%;background: ;">Lun</th>
+						<th style="width:14.2857143%;background: ;">Mar</th>
+						<th style="width:14.2857143%;background: ;">Mer</th>
+						<th style="width:14.2857143%;background: ;">Gio</th>
+						<th style="width:14.2857143%;background: ;">Ven</th>
+						<th style="width:14.2857143%;background: ;">Sab</th>
+						<th style="width:14.2857143%;background: ;">Dom</th>
+					</tr>
+				</thead>
+		<tr><td colspan="1"></td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-01">
+		1	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-02">
+		2	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-03">
+		3	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-04">
+		4	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-05">
+		5	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-06">
+		6	</div>
+</td><tr><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-07">
+		7	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-08">
+		8	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-09">
+		9	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-10">
+		10	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-11">
+		11	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-12">
+		12	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-13">
+		13	</div>
+</td><tr><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Today" data-cal-date="2022-03-14">
+		14	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-15">
+		15	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-16">
+		16	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-17">
+		17	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-18">
+		18	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-19">
+		19	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-20">
+		20	</div>
+</td><tr><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-21">
+		21	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-22">
+		22	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-23">
+		23	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-24">
+		24	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-25">
+		25	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-26">
+		26	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-27">
+		27	</div>
+</td><tr><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-28">
+		28	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-29">
+		29	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-30">
+		30	</div>
+</td><td style="background: ;">
+<!-- Module Calendar Day Pop-up -->
+
+	<div class="no-event style_Day" data-cal-date="2022-03-31">
+		31	</div>
+</td><td colspan="3"></td></tr></table></div></div>
+</div>
+<script type="text/javascript">
+(function($){
+	if ($('.spanEv:visible').length !== 0) {
+		return false;
+	}
+	var icmouse = 'click';
+	var mouseout = '1';
+	var icclasstip = '.icevent a';
+	var icclass = '.iccalendar';
+	var position = 'center';
+	var posmiddle = 'top';
+	var modid = '99';
+	var modidid = '#99';
+	var icagendabtn = '.icagendabtn_99';
+	var mod_iccalendar = '#mod_iccalendar_99';
+	var template = '.ic_rounded';
+	var loading = 'loading...';
+	var closetxt = 'Chiudi';
+	var tip_type = '1';
+	var tipwidth = 390;
+	var smallwidththreshold = 481;
+	var verticaloffset = 50;
+	var css_position = '';
+	var mobile_min_width = 320;
+	var extra_css = '';
+
+	$(document).on('click touchend', icagendabtn, function(e){		e.preventDefault();
+
+		url=$(this).attr('href');
+
+		$(modidid).html('<\div class="icloading_box"><\div style="text-align:center;">' + loading + '<\/div><\div class="icloading_img"><\/div><\/div>').load(url + ' ' + mod_iccalendar, function(){$('#mod_iccalendar_99').highlightToday();});
+
+	});
+
+	// Calendar Keyboard Accessibility (experimental, since 3.5.14)
+	if (typeof first_mod === 'undefined') {
+		$i = '1';
+		first_mod = modid;
+		first_nb = $i;
+		nb_mod = $i;
+	} else {
+		$i = (typeof $i === 'undefined') ? '2' : ++$i;
+		nb_mod = $i;
+	}
+
+	$('#ic-calendar-'+modid).addClass('ic-'+nb_mod);
+
+	$(document).keydown(function(e){
+
+		// ctrl+alt+C : focus on first Calendar module
+		// REMOVE: Polish language conflict, alt+C Ć
+//		if (e.ctrlKey && e.altKey && e.keyCode == 67) {
+//			$('#ic-calendar-'+first_mod).focus();
+//		}
+
+		// ctrl+alt+N : focus on Next calendar module
+		if (e.ctrlKey && e.altKey && e.keyCode == 78) {
+			if ($('#ic-calendar-'+modid).is(':focus')) {
+				activ = $('#ic-calendar-'+modid).attr('class');
+				act = activ.split('-');
+				act = act[1];
+				next = ++act;
+			}
+			mod_class = $('#ic-calendar-'+modid).attr('class');
+			if ($('.ic-'+next).length == 0) next = 1;
+			if (mod_class == 'ic-'+next) $('.ic-'+next).focus();
+		}
+
+		// On focused calendar module
+		if ($('#ic-calendar-'+modid).is(':focus')){
+			switch (e.keyCode) {
+				case 37:
+					// Left arrow pressed
+					url = $('#ic-calendar-'+modid+' #ic-prev-month').attr('href');
+					break;
+				case 38:
+					// Top arrow pressed
+					url = $('#ic-calendar-'+modid+' #ic-next-year').attr('href');
+					break;
+				case 39:
+					// Right arrow pressed
+					url = $('#ic-calendar-'+modid+' #ic-next-month').attr('href');
+					break;
+				case 40:
+					// Top arrow pressed
+					url = $('#ic-calendar-'+modid+' #ic-prev-year').attr('href');
+					break;
+			}
+
+			if ((!e.shiftKey && (e.keyCode == 37 || e.keyCode == 39)) ||
+				(e.shiftKey && (e.keyCode == 38 || e.keyCode == 40))) {
+				$(modidid).html('<\div class="icloading_box"><\div style="text-align:center;">' + loading + '<\/div><\div class="icloading_img"><\/div><\/div>').load(url + ' ' + mod_iccalendar, function(){$('#mod_iccalendar_99').highlightToday();});
+			}
+
+//			if ($(modidid+' '+icclasstip).is(':focus') && e.keyCode == 13){
+//				var icmouse = "click";
+//			}
+		}
+	});
+
+	if (tip_type=='2') {	$(document).on(icmouse, this, function(e){
+		e.preventDefault();
+
+		$(".iCaTip").tipTip({maxWidth: "400", defaultPosition: "top", edgeOffset: 1, activation:"hover", keepAlive: true});
+	});
+	}
+
+	if (tip_type=='1') {		$view_width=$(window).width();		if($view_width<smallwidththreshold){			icmouse='click touchend';
+		}
+
+		$(document).on(icmouse, modidid+' '+icclasstip, function(e){
+			$view_height=$(window).height();			$view_width=$(window).width();			e.preventDefault();
+			$('#ictip').remove();
+			$parent=$(this).parent();
+			var tip = $($parent).children(modidid+' .spanEv').html();
+			tip = tip.replace(/<icscript>/g,'<script>');
+			var $tip = tip.replace(/<\/icscript>/g,'<\/script>');
+
+			if ($view_width < smallwidththreshold)
+			{
+								css_position = 'fixed';
+				$width_px = Math.max(mobile_min_width,$view_width); 				$width = '100%';
+				$pos = '0px';
+				$top = '0px';
+				extra_css='border:0;border-radius:0;height:100%;box-shadow:none;margin:0px;padding:10px;min-width:'+mobile_min_width+'px;overflow-y:scroll;padding:0;';			}
+			else
+			{
+				css_position = 'absolute';
+				$width_px = Math.min($view_width, tipwidth);
+				$width = $width_px+'px';
+
+								switch(position) {
+					case 'left':
+						$pos=Math.max(0,$(modidid).offset().left-$width_px-10)+'px';
+						break;
+					case 'right':
+						$pos=Math.max(0,Math.min($view_width-$width_px,$(modidid).offset().left+$(modidid).width()+10))+'px';
+						break;
+					default:						$pos=Math.ceil(($view_width-$width_px)/2)+'px';
+						break;
+				}
+
+								if (posmiddle === 'top')
+				{
+					$top = Math.max(0,$(modidid).offset().top-verticaloffset)+'px';				}
+				else
+				{
+					$top = Math.max(0,$(modidid).offset().top+$(modidid).height()-verticaloffset)+'px';				}
+			}
+
+
+			$('body').prepend('<\div style="display:block; position:'+css_position+'; width:'+$width+'; left:'+$pos+'; top:'+$top+';'+extra_css+'" id="ictip"> '+$(this).parent().children('.date').html()+'<a class="close" style="cursor: pointer;"><\div style="display:block; width:auto; height:50px; text-align:right;">' + closetxt + '<\/div></a><span class="clr"></span>'+$tip+'<\/div>');
+
+			// Tooltip Keyboard Accessibility (experimental, since 3.5.14)
+			$(document).keydown(function(e){
+				//	Shift : focus on tooltip events
+				if ($('.icevent a').is(':focus') && e.keyCode == 16){
+					$('.ictip-event a').focus();
+				}
+				//	esc : close tooltip
+				if (($('.ictip-event a').is(':focus') || $('.icevent a').is(':focus')) && e.keyCode == 27){
+					e.preventDefault();
+					$('#ictip').remove();
+				}
+			});
+
+			// Close Tooltip
+			$(document).on('click touchend', '.close', function(e){
+				e.preventDefault();
+				$('#ictip').remove();
+			});
+
+			if (mouseout == '1')
+			{
+				$('#ictip')
+					.mouseout(function() {
+//						$( "div:first", this ).text( "mouse out" );
+						$('#ictip').stop(true).fadeOut(300);
+					})
+					.mouseover(function() {
+//						$( "div:first", this ).text( "mouse over" );
+						$('#ictip').stop(true).fadeIn(300);
+					});
+			}
+		});
+	}
+
+}) (jQuery);
+</script>
+</div><div class="well "><h3 class="page-header">Ultime Notizie</h3><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=478:hike-and-fly-italian-league-incontro-preparazione&amp;catid=9&amp;Itemid=107&amp;lang=it" itemprop="url">
+			<span itemprop="name">
+				Hike and Fly Italian League - incontro preparazione			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=477:cena-sociale-2022&amp;catid=12&amp;Itemid=113&amp;lang=it" itemprop="url">
+			<span itemprop="name">
+				Cena sociale 2022 ANNULLATA			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=476:campionato-hike-and-fly-italian-lague&amp;catid=9&amp;Itemid=107&amp;lang=it" itemprop="url">
+			<span itemprop="name">
+				Campionato Hike and Fly - Italian Lague			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=475:pulizia-decollo-3-gfeb&amp;catid=9&amp;Itemid=107&amp;lang=it" itemprop="url">
+			<span itemprop="name">
+				Pulizia decollo - 11 feb.			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=473:auguri-scurbatt&amp;catid=9&amp;Itemid=107&amp;lang=it" itemprop="url">
+			<span itemprop="name">
+				Auguri Scurbatt			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=472:navetta-sospesa-25-dic-e-1-gen&amp;catid=9&amp;Itemid=107&amp;lang=it" itemprop="url">
+			<span itemprop="name">
+				Navetta sospesa 25 dic. e 1 gen.			</span>
+		</a>
+	</li>
+</ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#top" id="back-top">
+					Torna su				</a>
+			</p>
+			<p>
+				&copy; 2022 Scurbatt			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>
